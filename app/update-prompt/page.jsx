@@ -5,6 +5,14 @@ import { useRouter, useSearchParams } from 'next/navigation';
 
 import Form from '@components/Form';
 
+export default function UpdatePromptPage(){
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <EditPrompt/>
+        </Suspense>
+    );
+}
+
 const EditPrompt = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -65,5 +73,3 @@ const EditPrompt = () => {
     />
   )
 }
-
-export default EditPrompt
